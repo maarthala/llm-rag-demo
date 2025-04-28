@@ -68,7 +68,7 @@ To change question update `.env` file
 
 ```
 
-# GENAI_API_KEY=AIza.....IOHM
+# export GENAI_API_KEY=AIza.....IOHM
 
 # GENERAL
 ...
