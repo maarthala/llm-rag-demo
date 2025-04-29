@@ -52,4 +52,4 @@ results = collection.query(
 
 relevant_chunks = [doc for sublist in results["documents"] for doc in sublist]
 ans = call_genai(question, relevant_chunks)
-print(f"Question: {question} \n Answer: {ans.text}")
+print(f"\n ### Question: {question} \n ##### Answer: {ans.text}")

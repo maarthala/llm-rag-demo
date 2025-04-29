@@ -18,15 +18,20 @@ for i, page in enumerate(pages):
     text = pytesseract.image_to_string(image_path)
     pdf_text.append(text.strip())
 
+print(f"Pages extracted {i}")
+
 # Remove temporary image files
 for imgfiles in os.listdir(output_folder):
     img_path = os.path.join(output_folder, imgfiles)
     if os.path.isfile(img_path):
         os.remove(img_path)
 
-
+print("Writing text to file...")
 # Write to text file
 output_text_file = "./data/text/extracted_text.txt"
 with open(output_text_file, "w", encoding="utf-8") as f:
     f.write("\n\n".join(pdf_text))
+
+print("Text extraction complete.")
+
 

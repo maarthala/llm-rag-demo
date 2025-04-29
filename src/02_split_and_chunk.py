@@ -46,7 +46,9 @@ for doc in documents:
             "text": chunk
         })
 
-
+print(f"Total chunks created: {len(chunk_documents)}")
+print("Embedding using model:", eb_model)
+# Initialize the embedding model
 model = SentenceTransformer(eb_model)
 
 texts = [chunk["text"] for chunk in chunk_documents]
